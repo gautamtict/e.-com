@@ -5,7 +5,6 @@ import Filters from "./components/Filters";
 import SearchBar from "./components/SearchBar";
 import ContentGrid from "./components/ContentGrid";
 import { setCategory } from "./features/contentSlice";
-
 function App() {
   const dispatch = useDispatch();
   const category = useSelector((s) => s.content.filters.category);
