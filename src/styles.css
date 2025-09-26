@@ -1,0 +1,272 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: #0b0b0c;
+  color: #eee;
+  -webkit-font-smoothing: antialiased;
+}
+
+.site-header {
+  padding: 12px 40px;
+  background: #111;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  color: #30d0c9;
+  font-size: 18px;
+}
+
+.navlinks {
+  display: flex;
+  gap: 24px;
+}
+
+.navlinks a {
+  color: #bbb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navlinks a.active {
+  color: #fff;
+  border-bottom: 2px solid #30d0c9;
+  padding-bottom: 4px;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.upload-btn {
+  background: #30d0c9;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.hero {
+  padding: 36px 0 24px 0;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 48px;
+  line-height: 1.02;
+}
+
+.main-area {
+  padding: 24px 40px 80px;
+}
+
+.controls {
+  margin-bottom: 18px;
+}
+
+.category-nav {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.cat {
+  background: none;
+  border: none;
+  color: #bdbdbd;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.cat.active {
+  background: #fff;
+  color: #000;
+  font-weight: 700;
+  padding: 8px 16px;
+}
+
+.search-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 14px 18px;
+  border-radius: 30px;
+  border: none;
+  background: #1a1a1c;
+  color: #ddd;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-btn {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* filters row */
+.filters-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.filter-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #1a1a1d;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #ddd;
+}
+
+.filter-pill input {
+  accent-color: #30d0c9;
+}
+
+.reset-btn {
+  margin-left: 12px;
+  background: none;
+  border: 1px dashed #555;
+  color: #ddd;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.content-wrapper {
+  margin-top: 8px;
+}
+
+.grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(4, 1fr); 
+}
+
+@media (max-width: 1200px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .hero h1 { font-size: 36px; }
+}
+@media (max-width: 480px) {
+  .grid { grid-template-columns: repeat(1, 1fr); }
+  .hero h1 { font-size: 28px; }
+}
+
+.card {
+  background: #141416;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+.card-media {
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg,#222,#111);
+}
+
+.card-media img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.placeholder {
+  color: #666;
+  font-size: 14px;
+}
+
+.card-body {
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.card-user {
+  color: #adb0b3;
+  font-size: 13px;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.card-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #c9c9c9;
+  font-size: 14px;
+}
+
+.price-label {
+  background: rgba(255,255,255,0.06);
+  padding: 6px 8px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.price-amount {
+  font-weight: 700;
+}
+
+.loader {
+  text-align: center;
+  margin-top: 18px;
+  opacity: 0.8;
+}
+
+.center {
+  text-align: center;
+  padding: 20px 0;
+  color: #bbb;
+}
+
+.count {
+  margin-top: 8px;
+  text-align: right;
+  color: #9a9a9a;
+  font-size: 13px;
+}
